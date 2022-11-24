@@ -1,6 +1,6 @@
 <table>
 <?php
-$query = 'SELECT * FROM `dzialy` LIMIT 0,1;';
+$query = 'SELECT * FROM `wypozyczenia` LIMIT 0,1;';
 $result = mysqli_query($conn, $query);
 if(mysqli_num_rows($result) > 0) {
     while ($row = mysqli_fetch_assoc($result)) {
@@ -12,7 +12,7 @@ if(mysqli_num_rows($result) > 0) {
     }
 }
 
-$query = 'SELECT * FROM `dzialy`;';
+$query = 'SELECT * FROM `wypozyczenia`;';
 $result = mysqli_query($conn, $query);
 if(mysqli_num_rows($result) > 0)
 {
