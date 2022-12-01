@@ -11,7 +11,7 @@
 </head>
 <?php require 'include/db_connect.php'; ?>
 <body>
-
+<?php session_start(); ?>
 
 <div class="sidenav">
     <a class="<?= ($_GET['page'] ?? '') == 'glowna' ? 'active' : '' ?>" href="?page=glowna">Strona główna</a>

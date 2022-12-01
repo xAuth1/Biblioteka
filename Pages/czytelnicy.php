@@ -1,5 +1,6 @@
 <table>
 <?php
+$_SESSION['SEBA'] = "śmieszek";
 $query = 'SELECT * FROM `czytelnicy` LIMIT 0,1;';
 $result = mysqli_query($conn, $query);
 if(mysqli_num_rows($result) > 0) {

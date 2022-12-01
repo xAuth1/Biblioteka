@@ -16,8 +16,10 @@ $query = 'SELECT * FROM `dzialy`;';
 $result = mysqli_query($conn, $query);
 if(mysqli_num_rows($result) > 0)
 {
+    $dziady = array();
     while ($row = mysqli_fetch_assoc($result))
     {
+        $dziady[]=$row;
         echo '<tr>';
         foreach($row as $a => $b)
         {
@@ -27,3 +29,6 @@ if(mysqli_num_rows($result) > 0)
     }
     echo '</table>';
 }
+
+setcookie('dzialy',json_encode($dziady), time()+86400);
+?>
